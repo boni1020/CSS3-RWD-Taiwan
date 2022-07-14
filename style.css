@@ -24,10 +24,10 @@ nav {
 
 nav ul {
   display: flex;
-  list-style: none;
-  padding-left: 1rem;
+  flex-wrap: nowrap;
 }
 nav ul li {
+  list-style: none;
   padding: 0.5rem 0.75rem;
 }
 nav ul li a {
@@ -55,9 +55,11 @@ ol {
 main.index {
   display: flex;
   width: 100%;
+  flex-wrap: wrap;
 }
 main.index section.left {
   padding-right: 1.5rem;
+  flex: 1 1 768px
 }
 main.index section.right h4 {
   font-size: 1.25rem;
@@ -68,10 +70,16 @@ main.index section.right {
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex: 1 1 350px;
 }
 
 main.index section.right p {
   margin: 1rem 0;
+}
+
+#curve_chart{
+  width: 100%;
+  height: 80%;
 }
 
 /* ========== agricultural ==========*/
@@ -93,6 +101,7 @@ main.index section.right p {
 .industrySec2 {
   display: flex;
   padding: 1rem;
+  flex-wrap: wrap;
 }
 .industrySec2 p {
   padding: 1.5rem;
@@ -100,6 +109,7 @@ main.index section.right p {
 .industrySec2 .left,
 .industrySec2 .right {
   width: 50%;
+  flex: 1 1 350px;
 }
 .industrySec2 .left ol {
   margin-left: 3rem;
@@ -111,6 +121,9 @@ main.index section.right p {
   align-items: center;
   justify-content: center;
   padding: 2rem 0;
+  flex-wrap: wrap;
+}
+.economySec1 figure{
 }
 
 img.arrow {
@@ -142,10 +155,33 @@ img.arrow {
   display: flex;
   justify-content:space-around;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .authorSec1 figure img {
   width: 200px;
   border: 2px solid #c4c4c4 ;
   border-radius: 50%;
+}
+.authorSec2{
+  display: flex;
+  flex-wrap: wrap;
+}
+.authorSec2 div{
+  padding: 2rem;
+  flex: 2 1 ;
+}
+
+
+/* ========== For mobile phone ==========*/
+
+@media screen and (max-width:768px) {
+  #curve_chart{
+    width: 100%;
+    height: 40%;
+  }
+  .economySec1,.author,.authorSec2,nav ul{
+    flex-direction: column;
+  }
+
 }

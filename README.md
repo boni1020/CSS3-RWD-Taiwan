@@ -1,2 +1,8 @@
-# Taiwan-Project-RWD
----台灣發展歷史# Taiwan-RWD
+## 作品說明
+
+台灣經濟發展歷史(RWD)
+
+## 使用技術
+
+- HTML
+- CSS3
